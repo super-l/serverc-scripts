@@ -254,7 +254,7 @@ closeSelinux()
 sudo apt-get update
 
 # 设置swap分区
-addSwap
+#addSwap
 
 # 判断jdk是否安装，安装jdk8
 checkJdk
