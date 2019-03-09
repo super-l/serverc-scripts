@@ -10,5 +10,5 @@ ubuntu14-oracle11g.sh
 ### centos7系统 apache+php环境一键快速安装
 apache_php.sh
 
-用法：apache_php.sh 端口号 网站名称 要绑定的域名
-例子：apache_php.sh 80 test test.superl.org
+##### 用法：apache_php.sh 端口号 网站名称 要绑定的域名
+##### 例子：apache_php.sh 80 test test.superl.org
