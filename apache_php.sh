@@ -64,16 +64,16 @@ if [ ! -f "$filePath" ];then
   echo -e "\n\e[1;36mStart  -->>create file:"$filePath
   touch $filePath
   echo "<VirtualHost *:$1>" >> $filePath
-  echo "\n    ServerName $3" >> $filePath
-  echo "\n    ServerAlias $3" >> $filePath
-  echo "\n    DocumentRoot /home/www/$2" >> $filePath
-  echo "\n    ErrorLog \"| /usr/sbin/rotatelogs /home/logs/apache/$2_%Y_%m_%d_error.log 86400 480\"" >> $filePath
-  echo "\n    CustomLog \"| /usr/sbin/rotatelogs /home/logs/apache/$2_%Y_%m_%d_access.log 86400 480\" common" >> $filePath 
-  echo "\n    <Directory \"/home/www/$2\">" >> $filePath
-  echo "\n       Options +Includes -Indexes" >> $filePath
-  echo "\n       AllowOverride All>" >> $filePath
-  echo "\n       Require all granted>" >> $filePath
-  echo "\n    </Directory>" >> $filePath
+  echo -e "\n    ServerName $3" >> $filePath
+  echo -e "\n    ServerAlias $3" >> $filePath
+  echo -e "\n    DocumentRoot /home/www/$2" >> $filePath
+  echo -e "\n    ErrorLog \"| /usr/sbin/rotatelogs /home/logs/apache/$2_%Y_%m_%d_error.log 86400 480\"" >> $filePath
+  echo -e "\n    CustomLog \"| /usr/sbin/rotatelogs /home/logs/apache/$2_%Y_%m_%d_access.log 86400 480\" common" >> $filePath 
+  echo -e "\n    <Directory \"/home/www/$2\">" >> $filePath
+  echo -e "\n       Options +Includes -Indexes" >> $filePath
+  echo -e "\n       AllowOverride All>" >> $filePath
+  echo -e "\n       Require all granted>" >> $filePath
+  echo -e "\n    </Directory>" >> $filePath
   echo "</VirtualHost>" >> $filePath
 else
   echo -e "\n\e[1;36mERROR  -->>is not empty:"$filePath
