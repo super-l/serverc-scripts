@@ -8,9 +8,8 @@
 #--------------------------------------------
 
 # chmod a+x apache_php.sh
-# Run: apache_php.sh port webname domain
-# Run Example: apache_php.sh 80 manager manager.zcshengshi.com
-# Run Example: ./test.sh 80 manager manager.zcshengshi.com
+# Run: ./apache_php.sh port webname domain
+# Run Example: ./apache_php.sh 80 test test.superl.org
 
 # install apache
 echo -e "\n\e[1;36mStart  -->>Install apache"
