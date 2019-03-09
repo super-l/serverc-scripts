@@ -13,11 +13,11 @@
 
 # install apache
 echo -e "\n\e[1;36mStart  -->>Install apache"
-yum install httpd
+yum install httpd -y
 
 # install php
 echo -e "\n\e[1;36mStart  -->>Install php"
-yum install php
+yum install php -y
 
 # firewall
 echo -e "\n\e[1;36mStart  -->>Update firewall"
