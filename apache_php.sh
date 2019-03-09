@@ -71,8 +71,8 @@ if [ ! -f "$filePath" ];then
   echo -e "\n    CustomLog \"| /usr/sbin/rotatelogs /home/logs/apache/$2_%Y_%m_%d_access.log 86400 480\" common" >> $filePath 
   echo -e "\n    <Directory \"/home/www/$2\">" >> $filePath
   echo -e "\n       Options +Includes -Indexes" >> $filePath
-  echo -e "\n       AllowOverride All>" >> $filePath
-  echo -e "\n       Require all granted>" >> $filePath
+  echo -e "\n       AllowOverride All" >> $filePath
+  echo -e "\n       Require all granted" >> $filePath
   echo -e "\n    </Directory>" >> $filePath
   echo "</VirtualHost>" >> $filePath
 else
