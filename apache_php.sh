@@ -31,7 +31,9 @@ yum install php-pdo -y
 # install php-mysql
 yum install php-mysql -y
 # install mbstring
-yum -y install php-mbstring -y
+yum install php-mbstring -y
+# install php-mcrypt
+yum install php-mcrypt -y
 
 echo -e "\n\e[1;36mStart  -->>Create Virtual config dir"
 # Create Virtual config dir
