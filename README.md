@@ -14,4 +14,5 @@ apache_php.sh
 ##### 例子：apache_php.sh 80 test test.superl.org
 
 ### opencv安装脚本 for windows
+来源于gocv项目，有轻微改动。
 
