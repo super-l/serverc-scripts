@@ -1,5 +1,5 @@
 # 项目简介
-个人原创编写的linux服务器常用脚本集中营。分享了笔者自己编写的各种常用环境安装脚本，在实际服务商亲测无误的才会发布出来~
+常用脚本集中营。分享了笔者自己编写的各种常用环境安装脚本与收集的脚本与文档，在实际服务商亲测无误的才会发布出来~
 
 ### ubuntu14.04系统 oracle前置安装脚本
 ubuntu14-oracle11g.sh
@@ -12,3 +12,6 @@ apache_php.sh
 
 ##### 用法：apache_php.sh 端口号 网站名称 要绑定的域名
 ##### 例子：apache_php.sh 80 test test.superl.org
+
+### opencv安装脚本 for windows
+
