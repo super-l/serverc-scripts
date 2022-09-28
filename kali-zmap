@@ -1,0 +1,8 @@
+# 建议先把kali的apt源切换为国内源
+# vim /etc/apt/sources.list  编辑
+# 插入下面的国内阿里云源：
+# deb https://mirrors.aliyun.com/kali kali-rolling main non-free contrib
+# deb-src https://mirrors.aliyun.com/kali kali-rolling main non-free contrib
+
+
+sudo apt-get install zmap
