@@ -30,12 +30,12 @@ javac -version
 
 ### 二：使用安装包安装：JDK官网下载地址
 
-1）：官方下载对应的.gz包，这里以jdk-8u181-linux-x64.tar.gz为例
+1）：官方下载对应的.gz包，这里以jdk-8u333-linux-x64.tar.gz为例
 
 2）：创建一个目录用于存放解压后的文件，并解压缩到该目录下
 ```
 sudo mkdir /usr/lib/jvm
-sudo tar -zxvf jdk-8u181-linux-x64.tar.gz -C /usr/lib/jvm
+sudo tar -zxvf jdk-8u333-linux-x64.tar.gz -C /usr/lib/jvm
 ```
 
 3）：修改环境变量
@@ -46,7 +46,7 @@ sudo vim ~/.bashrc
 4）：文件末尾追加如下内容
 ```
 #set oracle jdk environment
-export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_181  ## 这里要注意目录要换成自己解压的jdk 目录
+export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_333  ## 这里要注意目录要换成自己解压的jdk 目录
 export JRE_HOME=${JAVA_HOME}/jre  
 export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib  
 export PATH=${JAVA_HOME}/bin:$PATH
@@ -59,11 +59,11 @@ source ~/.bashrc
 
 6）：设置默认jdk
 ```
-sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk1.8.0_181/bin/java 300  
-sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk1.8.0_181/bin/javac 300  
-sudo update-alternatives --install /usr/bin/jar jar /usr/lib/jvm/jdk1.8.0_181/bin/jar 300   
-sudo update-alternatives --install /usr/bin/javah javah /usr/lib/jvm/jdk1.8.0_181/bin/javah 300   
-sudo update-alternatives --install /usr/bin/javap javap /usr/lib/jvm/jdk1.8.0_181/bin/javap 300 
+sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk1.8.0_333/bin/java 300  
+sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk1.8.0_333/bin/javac 300  
+sudo update-alternatives --install /usr/bin/jar jar /usr/lib/jvm/jdk1.8.0_333/bin/jar 300   
+sudo update-alternatives --install /usr/bin/javah javah /usr/lib/jvm/jdk1.8.0_333/bin/javah 300   
+sudo update-alternatives --install /usr/bin/javap javap /usr/lib/jvm/jdk1.8.0_333/bin/javap 300 
 ```
 
 7）：执行
