@@ -39,7 +39,7 @@ dataDirLog=/usr/local/apache-zookeeper-3.5.10-bin/log
 vim /etc/profile
 
 ```
-export ZK_HOME=/usr/local/apache-zookeeper-3.5.19-bin
+export ZK_HOME=/usr/local/apache-zookeeper-3.5.10-bin
 export PATH=${ZK_HOME}/bin:$PATH
 
 ```
