@@ -39,11 +39,8 @@ dataDirLog=/usr/local/apache-zookeeper-3.5.10-bin/log
 vim /etc/profile
 
 ```
-#zk dir
-export ZK_HOME=/usr/local/apache-zookeeper-3.5.10-bin/
-
-#append zk bin to  system path
-export PATH=${ZK_HOME}/bin:$PATH
+export ZK_HOME=/usr/local/apache-zookeeper-3.5.19-bin
+export PATH=$ZK_HOME/bin:$PATH
 ```
 source  /etc/profile 
 
