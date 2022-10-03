@@ -15,7 +15,7 @@ tar -zxvf kafka_2.12-3.2.3.tgz -C /usr/local
 
 ## 修改kafka相关配置
 
-vi config/server.properties
+vi /usr/local/kafka_2.12-3.2.3/config/server.properties
 ```
 listeners改为本机的ip，取消注释
 
@@ -25,14 +25,6 @@ zookeeper.session.timeout.ms=6000
 zookeeper.connection.timeout.ms =6000
 zookeeper.sync.time.ms =2000
 
-
-num.partitions后面增加2行
-
-#发送到不存在topic不自动创建
-auto.create.topics.enable=false
-
-#允许永久删除topic
-delete.topic.enable=true
 
 # 每一个broker在集群中的唯一表示，要求是正数。当该服务器的IP地址发生改变时，broker.id没有变化，则不会影响consumers的消息情况
 broker.id=0     
@@ -77,7 +69,7 @@ zookeeper.connection.timeout.ms=1000000  #ZooKeeper的最大超时时间，就�
 
 ## 后台启动
 
-nohup ./bin/kafka-server-start.sh ./config/server.properties & 
+nohup /usr/local/kafka_2.12-3.2.3/bin/kafka-server-start.sh /usr/local/kafka_2.12-3.2.3/config/server.properties & 
 
 ## 发送消息
 
