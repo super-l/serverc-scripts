@@ -40,7 +40,7 @@ vim /etc/profile
 
 ```
 #zk dir
-export ZK_HOME=/usr/local/zookeeper/zookeeper-3.4.13
+export ZK_HOME=/usr/local/apache-zookeeper-3.5.10-bin/
 
 #append zk bin to  system path
 export PATH=${ZK_HOME}/bin:$PATH
