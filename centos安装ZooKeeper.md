@@ -34,6 +34,20 @@ dataDirLog=/usr/local/apache-zookeeper-3.5.10-bin/log
 注释 #dataDir=/tmp/zookeeper
 ```
 
+## 环境变量
+
+vim /etc/profile
+
+```
+#zk dir
+export ZK_HOME=/usr/local/zookeeper/zookeeper-3.4.13
+
+#append zk bin to  system path
+export PATH=${ZK_HOME}/bin:$PATH
+```
+source  /etc/profile 
+
+
 ## 后台启动
 ```
 cd /usr/local/apache-zookeeper-3.5.10-bin/bin
