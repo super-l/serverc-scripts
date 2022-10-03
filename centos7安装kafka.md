@@ -68,21 +68,22 @@ zookeeper.connection.timeout.ms=1000000  #ZooKeeper的最大超时时间，就�
 ```
 
 ## 后台启动
+/usr/local/kafka_2.12-3.2.3/bin/kafka-server-start.sh -daemon /usr/local/kafka_2.12-3.2.3/config/server.properties
 
-nohup /usr/local/kafka_2.12-3.2.3/bin/kafka-server-start.sh /usr/local/kafka_2.12-3.2.3/config/server.properties & 
 
 ## 发送消息
 
-创建一个topic,名字为my_topic
+创建一个topic,名字为web
+/usr/local/kafka_2.12-3.2.3/bin/kafka-topics.sh --bootstrap-server localhost:9092 --create --topic web --partitions 1 --replication-factor 1
 
-sh bin/kafka-topics.sh --create --zookeeper 192.168.146.10:2181 --replication-factor 1 --partitions 1 --topic my_topic
 查看已经创建的topic
+/usr/local/kafka_2.12-3.2.3/bin/kafka-topics.sh --list zookeeper --bootstrap-server localhost:9092
+sh /usr/local/kafka_2.12-3.2.3/bin/kafka-topics.sh -list –-bootstrap-server 127.0.0.1:9092
 
-sh bin/kafka-topics.sh -list -zookeeper 192.168.146.10:2181
+
 启动Producer
+sh /usr/local/kafka_2.12-3.2.3/bin/kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic my_topic--from-beginning
 
-sh bin/kafka-console-consumer.sh --bootstrap-server 192.168.146.10:9092 --topic my_topic--from-beginning
 启动Consumer
-
-sh bin/kafka-console-consumer.sh --bootstrap-server 192.168.146.10:9092 --topic my_topic--from-beginning
+sh /usr/local/kafka_2.12-3.2.3/bin/kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic my_topic--from-beginning
 都重新再打开一个窗口，在解压目录下去执行这些命令，在Producer端发送消息，按enter键，Consumer就可以接受到消息了
