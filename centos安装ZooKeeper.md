@@ -13,8 +13,8 @@ tar -zxvf apache-zookeeper-3.5.10-bin.tar.gz -C /usr/local
 ## 建立文件夹、改名
 
 ```
-mkdir /usr/local/apache-zookeeper-3.5.10/data
-mkdir /usr/local/apache-zookeeper-3.5.10/log
+mkdir /usr/local/apache-zookeeper-3.5.10-bin/data
+mkdir /usr/local/apache-zookeeper-3.5.10-bin/log
 ```
 
 进入conf目录，有一个zoo_sample.cfg文件，将其重命名为zoo.cfg
@@ -28,21 +28,21 @@ vi /usr/local/apache-zookeeper-3.5.10-bin/conf/zoo.cfg
 编辑该配置文件，在最后添加
 
 ```
-dataDir=/usr/local/apache-zookeeper-3.5.10/data
-dataDirLog=/usr/local/apache-zookeeper-3.5.10/log
+dataDir=/usr/local/apache-zookeeper-3.5.10-bin/data
+dataDirLog=/usr/local/apache-zookeeper-3.5.10-bin/log
 
 注释 #dataDir=/tmp/zookeeper
 ```
 
 ## 后台启动
 ```
-cd /usr/local/apache-zookeeper-3.5.10/
+cd /usr/local/apache-zookeeper-3.5.10-bin/bin
 ./zkServer.sh start
 ```
 
 ## 前台启动
 ```
-cd /usr/local/apache-zookeeper-3.5.10/
+cd /usr/local/apache-zookeeper-3.5.10-bin/
 zkServer.sh start-foreground   
 ```
 若要查看日志可用前台启动
