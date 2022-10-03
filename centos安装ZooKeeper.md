@@ -12,11 +12,18 @@ tar -zxvf apache-zookeeper-3.5.10-bin.tar.gz -C /usr/local
 
 ## 建立文件夹、改名
 
+```
+mkdir /usr/local/apache-zookeeper-3.5.10/data
+mkdir /usr/local/apache-zookeeper-3.5.10/log
+```
+
 进入conf目录，有一个zoo_sample.cfg文件，将其重命名为zoo.cfg
 
+```
 cd /usr/local/apache-zookeeper-3.5.10-bin/conf
 mv zoo_sample.cfg zoo.cfg
 vi /usr/local/apache-zookeeper-3.5.10-bin/conf/zoo.cfg
+```
 
 编辑该配置文件，在最后添加
 
