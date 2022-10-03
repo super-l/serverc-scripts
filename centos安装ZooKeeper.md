@@ -40,7 +40,8 @@ vim /etc/profile
 
 ```
 export ZK_HOME=/usr/local/apache-zookeeper-3.5.19-bin
-export PATH=$ZK_HOME/bin:$PATH
+export PATH=${ZK_HOME}/bin:$PATH
+
 ```
 source  /etc/profile 
 
