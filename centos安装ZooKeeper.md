@@ -31,10 +31,6 @@ dataDirLog=/usr/local/apache-zookeeper-3.5.10/log
 ```
 cd /usr/local/apache-zookeeper-3.5.10/
 ./zkServer.sh start
-
-增加启动日志：
-
-nohup ./zkServer.sh start >> /logs/zookeeper.file 2>&1 &
 ```
 
 ## 前台启动
