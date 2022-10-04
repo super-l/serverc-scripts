@@ -80,16 +80,39 @@ zookeeper.connection.timeout.ms=1000000  #ZooKeeper的最大超时时间，就�
 ## 查看已经创建的topic
 ```
 /usr/local/kafka_2.12-3.2.3/bin/kafka-topics.sh --list zookeeper --bootstrap-server localhost:9092
-sh /usr/local/kafka_2.12-3.2.3/bin/kafka-topics.sh -list –-bootstrap-server 127.0.0.1:9092
 ```
 
-## 启动Producer
+## 生产者命令行操作 启动Producer
 ```
-sh /usr/local/kafka_2.12-3.2.3/bin/kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic my_topic--from-beginning
+路径： /usr/local/kafka_2.12-3.2.3/bin/kafka-console-producer.sh
+
+参数	描述
+–bootstrap-server <String: server toconnect to>	连接的 Kafka Broker 主机名称和端口号
+–topic <String: topic>	操作的 topic 名称
+
+例子：
+/usr/local/kafka_2.12-3.2.3/bin/kafka-console-producer.sh --bootstrap-server 127.0.0.1:9092 --topic web
+
 ```
 
-## 启动Consumer
+## 消费者命令行操作 启动Consumer 
 ```
-sh /usr/local/kafka_2.12-3.2.3/bin/kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic my_topic--from-beginning
+路径： /usr/local/kafka_2.12-3.2.3/bin/kafka-console-consumer.sh
+
+参数	描述
+–bootstrap-server <String: server toconnect to>	连接的 Kafka Broker 主机名称和端口号
+–topic <String: topic>	操作的 topic 名称
+–from-beginning	从头开始消费
+–group <String: consumer group id>	指定消费者组名称
+
+例子：
+
+1) 消费web主题中的数据
+
+/usr/local/kafka_2.12-3.2.3/bin/kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic web
+
+2) 把主题中所有的数据都读取出来（包括历史数据）。
+/usr/local/kafka_2.12-3.2.3/bin/kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic web --from-beginning
+
 ```
-都重新再打开一个窗口，在解压目录下去执行这些命令，在Producer端发送消息，按enter键，Consumer就可以接受到消息了
+在Producer端发送消息，按enter键，Consumer就可以接受到消息了
